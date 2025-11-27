@@ -3,268 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mi web Site</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Login con Clave Estática</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="Pie.css" />
   </head>
-
   <body>
-    <nav class="topheader">
-      <a href="" class="logo">
-        <img height="80" width="80" src="img/logo.png" alt="Logo" />
-        <h1>Clinica Veterinaria</h1>
-      </a>
+    <section class="login-container">
+      <div class="login-box">
+        <h2>Acceso Restringido</h2>
 
-      <ul class="menu-horizontal">
-        <li><a href="">Productos</a></li>
-
-        <li>
-          <a href="">Servicios</a>
-          <ul class="menu-vertical">
-            <li><a href="">Registro de pacientes</a></li>
-            <li><a href="">Prevencion de enfermedades</a></li>
-            <li><a href="">Diagnostico</a></li>
-            <li><a href="">Tratamientos</a></li>
-            <li><a href="">Servicios especializados </a></li>
-          </ul>
-        </li>
-
-        <li><a href="">Emergencia</a></li>
-        <li><a href="">Contáctanos</a></li>
-      </ul>
-    </nav>
-
-    <!-- Sección de Productos -->
-    <section class="seccion-atencion-vet">
-      <div class="div-gral-atencion">
-        <div class="div-atencion-texto">
-          <h2>Atencion Veterinaria</h2>
-          <p>
-            En nuestra clínica veterinaria brindamos una atención integral para
-            el cuidado y bienestar de tus mascotas. Contamos con un equipo de
-            profesionales altamente capacitados y equipamiento moderno para
-            realizar consultas, diagnósticos, vacunaciones y tratamientos
-            especializados. Nuestro objetivo es garantizar que cada animal
-            reciba el cuidado que necesita de manera oportuna y segura.
-          </p>
-          <p>
-            Además, nos enfocamos en la prevención y en la educación de los
-            dueños sobre la salud de sus mascotas. A través de controles
-            periódicos y orientación personalizada, ayudamos a detectar a tiempo
-            cualquier problema y a mantener una buena calidad de vida para cada
-            compañero peludo.
-          </p>
-        </div>
-
-        <div class="div-atencion-img">
-          <img src="img/atencionVet.jpg" alt="Productos" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección de Banca -->
-    <section class="seccion-bca">
-      <div class="div-gral-bca">
-        <div class="div-bca-texto">
-          <h2>Comprometidos con su bienestar</h2>
-          <p>
-            Cada mascota es única, y por eso ofrecemos un trato cercano y
-            personalizado, adaptado a sus necesidades y temperamento. Nuestro
-            compromiso es crear un entorno cálido y de confianza, donde tanto el
-            animal como su familia se sientan tranquilos, sabiendo que están
-            recibiendo la mejor atención posible.
-          </p>
-          <p>
-            Creemos que el bienestar animal va más allá de la atención médica.
-            Por eso, fomentamos hábitos de cuidado responsable, buena
-            alimentación y convivencia saludable entre las mascotas y sus
-            familias. Trabajamos con empatía y dedicación para asegurar que cada
-            visita sea una experiencia positiva, fortaleciendo el vínculo entre
-            las personas y sus animales, y promoviendo una vida plena y feliz
-            para ellos.
-          </p>
-        </div>
-
-        <div class="div-bca-video">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/bOK8xHuLMAs?si=uzBA_lvAtS0ncDxv"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-    </section>
-
-    <section class="seccion-form">
-      <div class="div-cont-form">
-        <h2>Formulario de pacientes</h2>
-        <p>Complete todos los campos</p>
-        <form class="form-reg-pac">
-          <!--LABEL/INPUT-->
-          <div class="campo">
-            <label for="nombre">Nombres completos:</label>
+        <form onsubmit="return validarLogin(event);">
+          <div class="input-group">
+            <label for="email">Email</label>
             <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              placeholder="Ingrese sus nombres"
-            />
-            <label for="apellido">Apellidos completos:</label>
-            <input
-              type="text"
-              id="apellido"
-              name="apellido"
-              placeholder="Ingrese sus apellidos"
-            />
-            <label for="apellido">Direccion:</label>
-            <input
-              type="text"
-              id="apellido"
-              name="apellido"
-              placeholder="Ingrese su direccion"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Introduce tu email"
+              required
             />
           </div>
 
-          <!--MENU DESPLEGABLE-->
-          <div class="campo">
-            <label for="nombre">Pais:</label>
-            <select id="pais" name="pais">
-              <option value="">Seleccione un pais</option>
-              <option value="Peru">Peru</option>
-              <option value="Peru">Mexico</option>
-              <option value="Peru">España</option>
-              <option value="Peru">Brasil</option>
-            </select>
+          <div class="input-group">
+            <label for="password">Clave de Acceso (ok)</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Introduce la clave secreta"
+              required
+            />
           </div>
 
-          <!--CHECKBOX-->
-          <div class="campo">
-            <label>Preferencias:</label>
-            <ul class="lista-checkbox">
-              <li>
-                <label
-                  ><input
-                    type="checkbox"
-                    name="preferencias"
-                    value="llamada"
-                  />Llamada</label
-                >
-              </li>
-              <li>
-                <label
-                  ><input
-                    type="checkbox"
-                    name="preferencias"
-                    value="videollamada"
-                  />videollamada</label
-                >
-              </li>
-              <li>
-                <label
-                  ><input
-                    type="checkbox"
-                    name="preferencias"
-                    value="en persona"
-                  />En persona</label
-                >
-              </li>
-            </ul>
-          </div>
-
-          <!--RADIO BUTTOM-->
-          <div class="campo">
-            <label>Sexo:</label>
-            <ul class="lista-radio">
-              <li>
-                <label
-                  ><input
-                    type="radio"
-                    name="sexo"
-                    value="masculino"
-                  />Masculino</label
-                >
-              </li>
-              <li>
-                <label
-                  ><input
-                    type="radio"
-                    name="sexo"
-                    value="femenino"
-                  />Femenino</label
-                >
-              </li>
-            </ul>
-          </div>
-
-          <button type="submit">Enviar</button>
+          <button type="submit" class="login-button">Iniciar Sesión</button>
         </form>
       </div>
     </section>
 
-    <section id="footer">
-      <footer class="footer">
-        <div class="footer-container">
-          <!-- Logo y nombre de sitio -->
-          <div class="footer-brand">
-            <img src="img/logo.png" alt="Logo" class="footer-logo" />
-            <p>ClinicaVet</p>
-            <small>© 2025 Todos los derechos reservados</small>
-          </div>
-
-          <!-- Enlaces legales -->
-          <div class="footer-links">
-            <h4>Legal</h4>
-            <a href="/Documentos/3.politica-privacidad.pdf"
-              >Política de Privacidad</a
-            >
-            <!-- Dentro de href llama a un documento pdf con la poltica-->
-            <a href="#">Términos y Condiciones</a>
-            <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
-            <a href="Documentos/LeyDeProteccionDeDatos.pdf"
-              >Protección de Datos</a
-            >
-          </div>
-
-          <!-- Redes sociales con íconos personalizados -->
-          <div class="footer-social">
-            <h4>Síguenos</h4>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
-                alt="Facebook"
-                class="social-icon"
-            /></a>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
-                alt="Instagram"
-                class="social-icon"
-            /></a>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
-                alt="LinkedIn"
-                class="social-icon"
-            /></a>
-            <a href="#"
-              ><img
-                src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
-                alt="Twitter"
-                class="social-icon"
-            /></a>
-          </div>
-        </div>
-      </footer>
-    </section>
+    <script src="login.js"></script>
   </body>
 </html>
