@@ -22,7 +22,7 @@
     background-color: #09a0e6;
     position: absolute;
     top: 5rem; /* Debajo del menú fijo */
-    left: 0;
+    right: 0rem;
   }
 
   .menu-horizontal.active {
