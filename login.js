@@ -9,7 +9,7 @@ function validarLogin(event) {
 
   // 2. Realizar la verificación
   if (passwordInput.toLowerCase() === CLAVE_SECRETA) {
-    alert("¡Acceso concedido! Bienvenido.");
+    alert("¡Tu clinica veterinaria te da la bienvenida!.");
     // Redirige a tu página principal
     window.location.href = "landingPage.html";
   } else {
