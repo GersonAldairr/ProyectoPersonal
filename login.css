@@ -124,4 +124,25 @@
   .input-group input {
     padding: 1rem; /* Aumenta el padding para un mejor toque táctil (16px) */
   }
+
+  .div-gral-atencion {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1rem 0rem;
+  }
+  .div-atencion-texto h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .div-gral-bca {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1rem 0rem;
+  }
+
+  .div-bca-texto h2 {
+    display: flex;
+    justify-content: center;
+  }
 }
