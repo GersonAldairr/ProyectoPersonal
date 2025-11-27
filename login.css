@@ -76,7 +76,7 @@
   padding: 0.75rem; /* 12px */
   border: none;
   border-radius: 0.3125rem; /* 5px */
-  background-color: #2575fc;
+  background-color: #152780;
   color: white;
   font-size: 1.1rem;
   cursor: pointer;
@@ -97,7 +97,7 @@
   /* El contenedor principal simula una vista de aplicación */
   .login-container {
     padding: 0; /* Quita el padding exterior */
-    background: #5bace2; /* Fondo blanco liso */
+    background: white; /* Fondo blanco liso */
     align-items: flex-start; /* Mueve el formulario arriba */
     min-height: auto;
   }
@@ -110,19 +110,23 @@
     max-width: 100%;
     box-shadow: none; /* Elimina la sombra */
     border-radius: 0; /* Elimina el borde redondeado */
-    border: none;
+    border: 0.05rem solid #152780;
+    border-radius: 1rem;
+    background: #95c9ec;
   }
 
   .texto-bienvenida h2 {
     font-size: 1.7rem; /* Ajuste sutil del tamaño */
+    color: white;
   }
 
   .texto-bienvenida h4 {
     font-size: 1.2rem; /* Ajuste sutil del tamaño */
+    color: white;
   }
 
   .input-group input {
-    padding: 1rem; /* Aumenta el padding para un mejor toque táctil (16px) */
+    padding: 1rem 0rem; /* Aumenta el padding para un mejor toque táctil (16px) */
   }
 
   .div-gral-atencion {
