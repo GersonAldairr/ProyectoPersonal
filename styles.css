@@ -204,6 +204,15 @@ select {
   margin-right: 0.313rem;
 }
 
+.form-reg-pac button {
+  display: inline-flex; /* mantener comportamiento flex para iconos/texto */
+  align-items: center;
+  margin: 1rem auto 0; /* centro horizontal con margen superior */
+  float: none; /* asegurar que no flote por reglas previas */
+  width: auto; /* evitar que ocupe todo el ancho */
+  border: 0.063rem solid black; /* corregir propiedad border (añadir unidad rem) */
+}
+
 button {
   background-color: white;
   color: black;
